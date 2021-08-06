@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "echo 'build script executed'",
     "test:unit": "jest --coverage",
     "test:onlychanged": "jest --onlyChanged --coverage",
     "test:markdown": "markdownlint . --ignore-path .gitignore",
