@@ -1,35 +1,21 @@
 {
-  "name": "node-examples",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "echo 'build script executed'",
-    "test:unit": "jest --coverage",
-    "test:onlychanged": "jest --onlyChanged --coverage",
-    "test:markdown": "markdownlint . --ignore-path .gitignore",
-    "lint": "standard",
-    "test": "npm run lint && npm run test:unit && npm run test:markdown"
+  "name": "examples",
+  "version": "0.1.0",
+  "bin": {
+    "examples": "bin/examples.js"
   },
-  "keywords": [],
-  "author": "Tierney Cyren <hello@bnb.im>",
-  "license": "MIT",
+  "scripts": {
+    "build": "echo \"===> build step\" && node index.js && exit 0",
+    "cdk": "cdk",
+    "test": "jest"
+  },
   "devDependencies": {
-    "all-contributors-cli": "^6.14.0",
-    "jest": "^25.2.6",
-    "markdownlint-cli": "^0.23.2",
-    "standard": "^14.3.3"
+    "@aws-cdk/assert": "1.117.0",
+    "aws-cdk": "1.117.0",
+    "jest": "^26.4.2"
   },
   "dependencies": {
-    "aws-sdk": "^2.963.0",
-    "yargs": "^15.3.1"
-  },
-  "standard": {
-    "globals": [
-      "describe",
-      "test",
-      "expect",
-      "jest"
-    ]
+    "@aws-cdk/core": "1.117.0",
+    "aws-sdk": "^2.963.0"
   }
 }
